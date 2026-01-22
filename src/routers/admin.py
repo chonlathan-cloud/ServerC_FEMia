@@ -27,8 +27,8 @@ class ShopResponse(BaseModel):
     
 class IntegrationUpdate(BaseModel):
     channelSecret: str
-    accessToken: str
-    botId: str
+    channelAccessToken: str
+    botBasicId: str
 
 class TierUpdate(BaseModel):
     tier: str
@@ -81,8 +81,8 @@ async def update_shop_integration(
     
     # Update with new values
     current_config["channelSecret"] = integration_data.channelSecret
-    current_config["accessToken"] = integration_data.accessToken
-    current_config["botId"] = integration_data.botId
+    current_config["channelAccessToken"] = integration_data.channelAccessToken
+    current_config["botBasicId"] = integration_data.botBasicId
     
     shop.line_config = current_config
     session.add(shop)

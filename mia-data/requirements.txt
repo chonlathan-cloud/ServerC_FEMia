@@ -1,8 +1,0 @@
-fastapi
-uvicorn
-sqlmodel
-asyncpg
-python-dotenv
-firebase-admin
-pydantic-settings
-pgvector
