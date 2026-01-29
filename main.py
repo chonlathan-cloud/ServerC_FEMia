@@ -32,7 +32,7 @@ app.add_middleware(
 )
 
 # Include Routers
-app.include_router(admin.router)
+app.include_router(admin.router, prefix="/api")
 
 @app.get("/health")
 async def health_check():
